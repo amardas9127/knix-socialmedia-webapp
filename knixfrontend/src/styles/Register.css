@@ -1,0 +1,135 @@
+.register-screen{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.register-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    border-radius: 1vh;
+    height: 80vh;
+    width: 60vh;
+    box-shadow: -1vh -1vh 3vh  #ffffff,
+        1vh 1vh 3vh #bebebe;
+}
+
+.appname{
+    font-size: 10vh;
+    font-weight: bold;
+    font-family: monospace;
+    background: linear-gradient(120deg, #555, #bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: default;
+    user-select: none;
+}
+
+.register-text{
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: .1vh;
+    color: #555;
+    cursor: default;
+    user-select: none;
+}
+.register-container{
+    width: 90%;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.register-form input{
+    letter-spacing: .1vh;
+    background-color: #e0e0e0;
+    height: 7vh;
+    border-radius: 2vh;
+    border: none;
+    box-shadow: inset -.3vh -.3vh .6vh #ffffff,
+        inset .3vh .3vh .6vh #bebebe;
+    font-size: 2.5vh;
+    color: #555;
+    padding: 0 2vh;
+}
+
+.register-form input:focus{
+    outline: #888 solid .1vh;
+}
+
+.register-form button{
+    height: 7vh;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 2vh;
+    box-shadow: -.5vh -.5vh 1.5vh #ffffff,
+        .5vh .5vh 1.5vh #bebebe;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: .1vh;
+    color: #555;
+    transition: all ease .3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.register-form button:hover{
+    box-shadow: -.5vh -.5vh 1.5vh #bebebe,
+        .5vh .5vh 1.5vh #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 2vh;
+    cursor: pointer;
+    font-size: 1.7vh;
+    font-family: monospace;
+    transition: all ease .3s;
+    user-select: none;
+}
+.login-link:hover{
+    text-decoration: underline;
+    text-decoration-color: #00ccff;
+}
+
+
+@media (max-width: 600px) {
+    .appname{
+        font-size: 15vw;
+    }
+    
+    .register-card{
+        width: 90VW;
+        height: 70vh;
+    }
+
+    .register-text{
+        font-size: 9vw;
+    }
+    .register-form input{
+        font-size: 4vw;
+    }
+    .register-link{
+        font-size: 3.5vw;
+    }
+
+
+  }

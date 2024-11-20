@@ -1,0 +1,255 @@
+.active .menu-icons-container {
+    background-color: #555;
+}
+
+.active .fa-solid {
+    color: #e0e0e0;
+}
+
+.navbar-container {
+    padding: 1vh;
+    height: 8vh;
+}
+
+.navbar-main {
+    background-color: #e0e0e0;
+    height: 6vh;
+    border-radius: 1.3vh;
+    box-shadow: -.5vh -.5vh 1vh #ffffff,
+        .5vh .5vh 1vh #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+
+.app-name {
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: monospace;
+    background: linear-gradient(120deg, #555, #bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: default;
+    user-select: none;
+    animation: fade-in-left 1s;
+}
+
+@keyframes fade-in-left {
+    from {
+        transform: translateX(-10vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 38vw;
+    height: 5vh;
+    border-radius: 5vh;
+    background-color: #e0e0e0;
+    box-shadow: inset -.3vh -.3vh .6vh #ffffff,
+        inset .3vh .3vh .6vh #bebebe;
+}
+
+.search-box {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 5vh;
+    padding: 0 2vw;
+    font-size: 2.5vh;
+    color: #555;
+}
+
+.search-box {
+    outline: none;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 4.5vh;
+    width: 4.5vh;
+    border-radius: 5vh;
+    background: #e0e0e0;
+    box-shadow: -.2vh -.2vh .5vh #ffffff,
+        .2vh .2vh .5vh #bebebe;
+    right: 0;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5vh;
+    width: 4.5vh;
+    margin-left: 1.3vh;
+    border-radius: 5vh;
+    background: #e0e0e0;
+    box-shadow: -.2vh -.2vh .5vh #ffffff,
+        .2vh .2vh .5vh #bebebe;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+
+.menu-icons-container:hover {
+    box-shadow: -.2vh -.2vh .5vh #bebebe,
+        .2vh .2vh .5vh #ffffff;
+}
+
+.fa-solid {
+    color: #555;
+    font-size: 2.5vh;
+}
+
+@keyframes fade-in-top-home {
+    from {
+        transform: translateY(-12vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+@keyframes fade-in-top-friends {
+    from {
+        transform: translateY(-10vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+@keyframes fade-in-top-posts {
+    from {
+        transform: translateY(-8vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+@keyframes fade-in-top-settings {
+    from {
+        transform: translateY(-6vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes search {
+    0%{
+        width: 5.55vh;
+        transform: translateY(-10vh);
+    }
+
+    30%{
+        transform: translateY(0);
+    }
+
+    40%{
+        width: 5.55vh;
+    }
+
+    100%{
+        width: 38vw;
+    }
+}
+
+.home{
+    animation: fade-in-top-home 1.3s ease;
+}
+.friends{
+    animation: fade-in-top-friends 1.2s ease;
+}
+.posts{
+    animation: fade-in-top-posts 1.1s ease;
+}
+.settings{
+    animation: fade-in-top-settings 1s ease;
+}
+
+.search-container{
+    animation: search 1.5s;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 6vh; /* Positioned 5% from the top */
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 1vh;
+    color: #555;
+    cursor: pointer;
+    
+  }
+  
+  
+  .search-result-item button {
+    background-color: #e0e0e0;
+    box-shadow: .5vh .5vh 1vh #bebebe,
+        .5vh .5vh 1vh #ffffff;
+    color: #555;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .search-result-item button:hover {
+    background-color: #d0d0d0;
+  }
