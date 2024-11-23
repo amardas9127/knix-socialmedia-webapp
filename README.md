@@ -5,10 +5,10 @@ Knix is an in-progress social media app that lets users chat with friends, make 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153548.png)
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153648.png)
 ![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153634.png)
 ![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153601.png)
-![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153601.png)
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153548.png)
 
 
 ## How to setup ?
