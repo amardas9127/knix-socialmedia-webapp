@@ -1,8 +1,60 @@
-# React + Vite
+# Knix A Social media Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Knix is an in-progress social media app that lets users chat with friends, make new connections, and upload posts such as images. The app is under development and aims to provide an engaging platform for social interaction.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153648.png)
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153634.png)
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153601.png)
+![App Screenshot](https://github.com/amardas9127/knix-socialmedia-webapp/blob/main/Screenshot%202024-11-23%20153548.png)
+
+
+## How to setup ?
+
+
+Change this to your mongoDb connection string Backend/server.js
+
+```javascript
+    mongoose
+  .connect("YOUR MONGODB CONNECTION STRING", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+```
+
+
+In the Backend folder run the following commands.
+
+```bash
+    npm install
+
+```
+
+In the knixfrontend folder run the following commands.
+
+```bash
+    npm install
+```
+
+
+## How to Run ? (*note that it is still under developement)
+
+
+In the Backend folder run the following commands.
+
+```bash
+     nodemon server.js
+```
+```bash
+    ctrl+c then Y  //to stop the server
+```
+
+In the knixfrontend folder run the following commands.
+
+```bash
+    npm run dev
+```
+```bash
+    ctrl+c then Y  //to stop the server
+```
