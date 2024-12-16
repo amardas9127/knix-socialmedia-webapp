@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Register from "./components/Register";
 import KnixAI from "./components/KnixAI";
+import FriendsPost from "./components/FriendsPost";
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
         {/* Public Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/friendposts/:id" element={<FriendsPost />} />
       </Routes>
     </>
   );

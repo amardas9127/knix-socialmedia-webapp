@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PostCard from "../widgets/PostCard";
 import axios from "axios";
 
@@ -7,6 +7,7 @@ export default function Posts() {
   const [imageFile, setImageFile] = useState(null); // Store the file object
   const [caption, setCaption] = useState("");
   const [posts, setPosts] = useState([]);
+  const [isUploading, setIsUploading] = useState(false); // State to track upload status
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -27,10 +28,9 @@ export default function Posts() {
       } catch (error) {
         console.error('Error fetching posts:', error);
       }
-      
     };
 
-    fetchPosts();// Call the function when the component mounts
+    fetchPosts(); // Call the function when the component mounts
   }, []);
 
   const handleImageChange = (e) => {
@@ -63,6 +63,8 @@ export default function Posts() {
     formData.append("upload_preset", uploadPreset); // Preset for Cloudinary
   
     try {
+      setIsUploading(true); // Set uploading to true when upload starts
+      
       // Upload the image to Cloudinary
       const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
         method: "POST",
@@ -114,11 +116,10 @@ export default function Posts() {
     } catch (error) {
       console.error("Error uploading image:", error);
       alert("There was an error uploading the image.");
+    } finally {
+      setIsUploading(false); // Set uploading to false when upload completes
     }
   };
-
-  
-  
 
   return (
     <div className="flex w-full min-h-[100vh] flex-col">
@@ -126,17 +127,16 @@ export default function Posts() {
         MY POSTS
       </div>
       {posts.map((elem, ids) => {
-  return (
-    <PostCard
-      key={ids} // You should use a unique key prop here, using the `ids` from map
-      imageurl={elem.imageUrl}
-      userimg={elem.username ? elem.username.charAt(0).toUpperCase() : "😀"} // Replace with actual user image if available, e.g., elem.userImg
-      username={elem.username || "Not found"} // Replace with actual username if available, e.g., elem.username
-      caption={elem.caption} // Replace with actual caption, e.g., elem.caption
-    />
-  );
-})}
-
+        return (
+          <PostCard
+            key={ids} // You should use a unique key prop here, using the `ids` from map
+            imageurl={elem.imageUrl}
+            userimg={elem.username ? elem.username.charAt(0).toUpperCase() : "😀"} // Replace with actual user image if available, e.g., elem.userImg
+            username={elem.username || "Not found"} // Replace with actual username if available, e.g., elem.username
+            caption={elem.caption} // Replace with actual caption, e.g., elem.caption
+          />
+        );
+      })}
 
       {/* Plus button to open modal */}
       <button
@@ -184,7 +184,11 @@ export default function Posts() {
                 onClick={handlePostSubmit}
                 className="bg-green-400 text-white py-2 px-4 rounded"
               >
-                Post
+                {isUploading ? (
+                  <div className="w-5 h-5 animate-spin content-cente flex justify-center items-center"><i class="fa-solid fa-arrows-rotate text-white"></i></div>
+                ) : (
+                  "Post"
+                )}
               </button>
             </div>
           </div>

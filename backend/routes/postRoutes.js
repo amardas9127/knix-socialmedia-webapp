@@ -45,4 +45,5 @@ router.get('/getpost', async (req, res) => {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });
+
 module.exports = router;
