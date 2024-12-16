@@ -147,6 +147,11 @@ export default function Navbar() {
               <i className="fa-solid fa-images"></i>
             </div>
           </NavLink>
+          <NavLink to="/knixai">
+            <div className="menu-icons-container settings">
+            <i className="fa-solid fa-comment"></i>
+            </div>
+          </NavLink>
           <NavLink to="/settings">
             <div className="menu-icons-container settings">
               <i className="fa-solid fa-user"></i>
