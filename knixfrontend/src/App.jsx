@@ -6,7 +6,7 @@ import Settings from "./components/Settings";
 import Login from "./components/Login";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Register from "./components/Register";
-import KnixAI from "./components/KnixAi";
+import KnixAI from "./components/KnixAI";
 import { useEffect, useState } from "react";
 
 function App() {

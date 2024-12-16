@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Connect to MongoDB
 mongoose
-  .connect("YOUR MONGODB CONNECTION STRING", {
+  .connect("mongodb+srv://amardas9127:amar@cluster0.nfroz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster)", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

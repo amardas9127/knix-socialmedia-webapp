@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/navbar.css";
+import "../styles/Navbar.css"
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
