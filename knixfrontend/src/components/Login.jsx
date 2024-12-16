@@ -17,35 +17,35 @@ export default function Login() {
   };
 
   const loginSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+  e.preventDefault();
 
-    try {
-      const response = await axios.post("http://localhost:5000/api/login", formData);
+  try {
+    const response = await axios.post("http://localhost:5000/api/login", formData);
 
-      // Show success toast
-      toast.success(response.data.message, {
-        position: "top-right",
-        autoClose: 3000,
-      });
+    // Show success toast
+    toast.success(response.data.message, {
+      position: "top-right",
+      autoClose: 3000,
+    });
 
-      // Store login details in local storage
-      const { email, _id } = response.data.user; // Assuming `user` contains user details
-      localStorage.setItem("userDetails", JSON.stringify({ email, id: _id }));
+    // Store user details in localStorage
+    const { email, _id, username } = response.data.user;
+    localStorage.setItem("userDetails", JSON.stringify({ email, id: _id, username }));
 
-      // Navigate to home after successful login
-      setTimeout(() => {
-        navigate("/"); // Adjust "/home" to your actual home page route
-      }, 3000);
-    } catch (err) {
-      // Show error toast
-      const errorMessage = err.response?.data?.error || "Login failed";
-      toast.error(errorMessage, {
-        position: "top-right",
-        autoClose: 3000,
-      });
-    }
-  };
+    // Ensure localStorage is updated correctly
+    console.log(localStorage.getItem("userDetails"));
 
+    // Navigate to home after successful login
+    setTimeout(() => {
+      navigate("/"); // Redirect to Home
+    }, 3000);
+  } catch (err) {
+    toast.error("Login failed", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  }
+};
   return (
     <div className="login-screen">
       <h1 className="appname">KNIX</h1>

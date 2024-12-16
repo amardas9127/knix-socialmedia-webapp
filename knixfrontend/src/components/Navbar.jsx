@@ -98,7 +98,7 @@ export default function Navbar() {
         </NavLink>
         <div className="search-container">
           <input
-            className="search-box"
+            className="search-box text-[2.5vh]"
             type="text"
             maxLength={40}
             placeholder="Search......."
@@ -142,11 +142,6 @@ export default function Navbar() {
               <i className="fa-solid fa-house"></i>
             </div>
           </NavLink>
-          <NavLink to="/friends">
-            <div className="menu-icons-container friends">
-              <i className="fa-solid fa-user-group"></i>
-            </div>
-          </NavLink>
           <NavLink to="/posts">
             <div className="menu-icons-container posts">
               <i className="fa-solid fa-images"></i>
@@ -154,7 +149,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink to="/settings">
             <div className="menu-icons-container settings">
-              <i className="fa-solid fa-gear"></i>
+              <i className="fa-solid fa-user"></i>
             </div>
           </NavLink>
         </div>

@@ -7,8 +7,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true, maxLength: 10 },
   username: { type: String, required: true, unique: true },
   friends: { type: [mongoose.Schema.Types.ObjectId], ref: 'User', default: [] },
-  posts: { type: [mongoose.Schema.Types.ObjectId], ref: 'User', default: [] },
-  recentchats: { type: [mongoose.Schema.Types.ObjectId], ref: 'User', default: [] },
+  posts: { type: [ { imageUrl: { type: String }, caption: { type: String } , username :{type: String}} ], ref: 'User', default: [] },
 });
 
 const User = mongoose.model("User", userSchema);

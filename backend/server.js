@@ -4,6 +4,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const friendRoutes = require("./routes/friendRoutes");
+const postRoutes = require("./routes/postRoutes");
 
 const app = express();
 
@@ -27,3 +28,4 @@ app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`)
 app.use("/api", authRoutes); // Authentication routes
 app.use("/api", userRoutes); // User search routes
 app.use("/api", friendRoutes); // Friend-related routes
+app.use("/api", postRoutes); // Friend-related routes

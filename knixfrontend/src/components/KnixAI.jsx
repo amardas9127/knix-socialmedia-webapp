@@ -3,7 +3,7 @@ import RecMsgContainer from "../widgets/RecMsgContainer";
 import SendMsgContainer from "../widgets/SendMsgContainer";
 import FriendCard from "../widgets/FriendCard";
 
-export default function Friends() {
+export default function KnixAI() {
   return (
     <div className="w-full p-[2vh] flex justify-between overflow-hidden">
       <div className="bg-apptheme h-[88vh] w-[28vw] shadow-neusm rounded-[3vh] items-center flex flex-col overflow-hidden animate-sidegrow">
